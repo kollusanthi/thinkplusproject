@@ -1,40 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Learning Platform</title>
-    <link rel="stylesheet" href="css/style.css">
+  <title>Quiz - Learning Platform</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">🎓 Learning Platform</div></br>
-        <div class="nav-links">
-            <a href="dashboard.html">Dashboard</a>
-            <a href="quiz.html" class="active">Take Quiz</a>
-            <button onclick="logout()" class="btn btn-outline">Logout</button>
-        </div>
-    </nav>
 
-    <div class="container">
-        <div class="quiz-header">
-            <h1>📝 Take a Quiz</h1>
-            
-  <h3>General Knowledge</h3>
+<div class="quiz-box">
+
+  <h1>📝 Take a Quiz</h1>
+  <h3>Web Development Quiz</h3>
 
   <p>⏱️ Time: 00:00</p>
 
+  <!-- Q1 -->
   <h3>Question 1</h3>
-
-  <p>What is the capital of France?</p>
-
+  <p>HTML stands for?</p>
   <div class="options">
-    <ul>
-    <label><input type="radio" name="q1"> Paris</label>
-    <label><input type="radio" name="q1"> London</label>
-    <label><input type="radio" name="q1"> Berlin</label>
-    <label><input type="radio" name="q1"> Rome</label>
-    </ul>
+    <label><input type="radio" name="q1"> Hyper Text Markup Language</label>
+    <label><input type="radio" name="q1"> Home Tool Markup</label>
+    <label><input type="radio" name="q1"> Hyperlinks</label>
+  </div>
+
+  <!-- Q2 -->
+  <h3>Question 2</h3>
+  <p>CSS is used for?</p>
+  <div class="options">
+    <label><input type="radio" name="q2"> Structure</label>
+    <label><input type="radio" name="q2"> Styling</label>
+    <label><input type="radio" name="q2"> Database</label>
+  </div>
+
+  <!-- Q3 -->
+  <h3>Question 3</h3>
+  <p>JavaScript is a?</p>
+  <div class="options">
+    <label><input type="radio" name="q3"> Programming Language</label>
+    <label><input type="radio" name="q3"> Markup Language</label>
+    <label><input type="radio" name="q3"> Style Sheet</label>
+  </div>
+
+  <!-- Q4 -->
+  <h3>Question 4</h3>
+  <p>Node.js runs on?</p>
+  <div class="options">
+    <label><input type="radio" name="q4"> Browser</label>
+    <label><input type="radio" name="q4"> Server</label>
+    <label><input type="radio" name="q4"> Database</label>
+  </div>
+
+  <!-- Q5 -->
+  <h3>Question 5</h3>
+  <p>React is a?</p>
+  <div class="options">
+    <label><input type="radio" name="q5"> Framework</label>
+    <label><input type="radio" name="q5"> Library</label>
+    <label><input type="radio" name="q5"> Database</label>
   </div>
 
   <div class="buttons">
@@ -47,17 +68,9 @@
 
   <h2>🎉 Quiz Completed!</h2>
   <p>0%</p>
-  <p>You answered 0 out of 1 questions correctly</p>
+  <p>You answered 0 out of 5 questions correctly</p>
 
 </div>
-                <div class="result-actions">
-                    <button onclick="backToTopics()" class="btn btn-primary">Back to Topics</button>
-                    <button onclick="viewDashboard()" class="btn btn-outline">View Dashboard</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script src="js/quiz.js"></script>
 </body>
 </html>
