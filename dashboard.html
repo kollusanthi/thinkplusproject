@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">🎓 Learning Platform</div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="quiz.html">Take Quiz</a>
+            <button onclick="logout()" class="btn btn-outline">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="dashboard-header">
+            <h1>Welcome, <span id="userName">Student</span>!</h1>
+            <p>Track your progress and get personalized recommendations</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-info">
+                    <h3>Current Level</h3>
+                    <p id="currentLevel" class="stat-value">-</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-info">
+                    <h3>Avg Score</h3>
+                    <p id="avgScore" class="stat-value">-</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📝</div>
+                <div class="stat-info">
+                    <h3>Total Attempts</h3>
+                    <p id="totalAttempts" class="stat-value">-</p>
+                </div>
+            </div>
+            <div class="stat-card highlight">
+                <div class="stat-icon">💡</div>
+                <div class="stat-info">
+                    <h3>Recommended Topic</h3>
+                    <p id="recommendedTopic" class="stat-value">-</p>
+                    <span id="difficultyAdjustment" class="badge">-</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Chart -->
+        <div class="chart-section">
+            <h2>📈 Progress by Topic</h2>
+            <div class="chart-container">
+                <canvas id="progressChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Topics List -->
+        <div class="topics-section">
+            <h2>📚 Available Topics</h2>
+            <div id="topicsList" class="topics-grid">
+                <!-- Topics will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Recommendation History -->
+        <div class="history-section">
+            <h2>📋 Recommendation History</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Suggested Difficulty</th>
+                        <th>Reason</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="historyTable">
+                    <!-- History will be loaded here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="quizModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Start Quiz</h2>
+            <p id="quizTopicName"></p>
+            <button onclick="startQuiz()" class="btn btn-primary">Begin Quiz</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
