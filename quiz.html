@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">🎓 Learning Platform</div></br>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="quiz.html" class="active">Take Quiz</a>
+            <button onclick="logout()" class="btn btn-outline">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="quiz-header">
+            <h1>📝 Take a Quiz</h1>
+            
+  <h3>General Knowledge</h3>
+
+  <p>⏱️ Time: 00:00</p>
+
+  <h3>Question 1</h3>
+
+  <p>What is the capital of France?</p>
+
+  <div class="options">
+    <ul>
+    <label><input type="radio" name="q1"> Paris</label>
+    <label><input type="radio" name="q1"> London</label>
+    <label><input type="radio" name="q1"> Berlin</label>
+    <label><input type="radio" name="q1"> Rome</label>
+    </ul>
+  </div>
+
+  <div class="buttons">
+    <button>Previous</button>
+    <button>Next</button>
+    <button>Submit Quiz</button>
+  </div>
+
+  <hr>
+
+  <h2>🎉 Quiz Completed!</h2>
+  <p>0%</p>
+  <p>You answered 0 out of 1 questions correctly</p>
+
+</div>
+                <div class="result-actions">
+                    <button onclick="backToTopics()" class="btn btn-primary">Back to Topics</button>
+                    <button onclick="viewDashboard()" class="btn btn-outline">View Dashboard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
